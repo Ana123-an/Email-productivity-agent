@@ -1,0 +1,7 @@
+{
+  "categorization": "Categorize this email into one of: Important, Newsletter, Spam, To-Do. To-Do emails must include a direct request requiring user action. Respond with only the category name.",
+  "action_item": "Extract tasks from the email. Respond in JSON list format: [ { \"task\": \"...\", \"deadline\": \"...\" } ]. If no tasks, return an empty list [].",
+  "auto_reply": "If the email is a meeting request, draft a polite, concise reply asking for an agenda and proposing 1-2 time slots. Maintain a professional tone.",
+  "summary": "Summarize the following email in 2\u20133 bullet points, focusing on key information and any required actions.",
+  "general_agent": "You are an Email Productivity Agent helping the user manage their inbox. Always use the stored prompts as behavioral instructions whenever relevant."
+}

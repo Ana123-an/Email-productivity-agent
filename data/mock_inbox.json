@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "from": "manager@company.com",
+    "to": "user@company.com",
+    "subject": "Project Alpha - Status Meeting",
+    "body": "Hi,\n\nCan we meet tomorrow at 3 PM to discuss Project Alpha status? Please confirm and let me know if you have any agenda items to add.\n\nThanks,\nManager",
+    "timestamp": "2025-11-24T10:15:00",
+    "raw_folder": "INBOX"
+  },
+  {
+    "id": 2,
+    "from": "newsletter@techinsider.com",
+    "to": "user@company.com",
+    "subject": "Weekly Tech Digest - Top 10 AI Breakthroughs",
+    "body": "Hello Subscriber!\n\nHere are this week's top technology stories:\n\n1. New AI model achieves human-level reasoning\n2. Quantum computing breakthrough announced\n3. Electric vehicle sales surge globally\n\n[Continue reading...]\n\nUnsubscribe | Manage Preferences",
+    "timestamp": "2025-11-24T08:30:00",
+    "raw_folder": "INBOX"
+  },
+  {
+    "id": 3,
+    "from": "spam@deals4u.biz",
+    "to": "user@company.com",
+    "subject": "\ud83c\udf89 CONGRATULATIONS! You've WON $1,000,000!!!",
+    "body": "DEAR WINNER,\n\nYOU HAVE BEEN SELECTED AS OUR GRAND PRIZE WINNER! Click here to claim your prize NOW!!!\n\nLIMITED TIME OFFER - ACT FAST!\n\n[Suspicious link]",
+    "timestamp": "2025-11-24T06:12:00",
+    "raw_folder": "INBOX"
+  },
+  {
+    "id": 4,
+    "from": "hr@company.com",
+    "to": "user@company.com",
+    "subject": "Action Required: Complete Annual Compliance Training",
+    "body": "Dear Team Member,\n\nThis is a reminder that all employees must complete the annual compliance training by November 30, 2025.\n\nPlease log into the learning portal and complete the following modules:\n- Data Privacy & Security\n- Workplace Ethics\n- Anti-Harassment Training\n\nDeadline: November 30, 2025\n\nThank you,\nHR Department",
+    "timestamp": "2025-11-23T14:20:00",
+    "raw_folder": "INBOX"
+  },
+  {
+    "id": 5,
+    "from": "client@partnercorp.com",
+    "to": "user@company.com",
+    "subject": "Q4 Deliverables - Need Clarification",
+    "body": "Hi,\n\nI hope you're doing well. I'm reviewing the Q4 deliverables document you sent last week, and I have a few questions:\n\n1. Can you clarify the timeline for Phase 2 implementation?\n2. What resources will be needed from our side?\n3. Are there any dependencies we should be aware of?\n\nCould we schedule a call this week to discuss? I'm available Tuesday or Thursday afternoon.\n\nBest regards,\nClient",
+    "timestamp": "2025-11-23T11:45:00",
+    "raw_folder": "INBOX"
+  },
+  {
+    "id": 6,
+    "from": "notifications@github.com",
+    "to": "user@company.com",
+    "subject": "[Repository] New pull request #42: Feature/authentication",
+    "body": "A new pull request has been opened in your repository:\n\nTitle: Add JWT authentication middleware\nAuthor: developer123\nFiles changed: 8\nComments: 0\n\nView Pull Request: https://github.com/...\n\n---\nYou're receiving this because you're watching this repository.",
+    "timestamp": "2025-11-23T09:30:00",
+    "raw_folder": "INBOX"
+  },
+  {
+    "id": 7,
+    "from": "finance@company.com",
+    "to": "user@company.com",
+    "subject": "Expense Report Submission Deadline - November 27",
+    "body": "Dear Colleagues,\n\nPlease be reminded that all October expense reports must be submitted by November 27, 2025.\n\nEnsure all receipts are attached and properly categorized in the expense management system.\n\nLate submissions may delay reimbursement processing.\n\nBest regards,\nFinance Team",
+    "timestamp": "2025-11-22T16:00:00",
+    "raw_folder": "INBOX"
+  },
+  {
+    "id": 8,
+    "from": "marketing@saasproduct.com",
+    "to": "user@company.com",
+    "subject": "New Feature Launch: Advanced Analytics Dashboard",
+    "body": "Hi there!\n\nWe're excited to announce the launch of our new Advanced Analytics Dashboard!\n\nKey Features:\n\u2713 Real-time data visualization\n\u2713 Custom report builder\n\u2713 Export to multiple formats\n\u2713 Team collaboration tools\n\nWatch our demo video: [link]\n\nBest,\nThe SaaS Product Team",
+    "timestamp": "2025-11-22T13:15:00",
+    "raw_folder": "INBOX"
+  },
+  {
+    "id": 9,
+    "from": "colleague@company.com",
+    "to": "user@company.com",
+    "subject": "Can you review my presentation before tomorrow's meeting?",
+    "body": "Hey!\n\nI've attached the presentation for tomorrow's client meeting. Could you review it and provide feedback by end of day today?\n\nI want to make sure we're aligned on the messaging before presenting to the client.\n\nThanks so much!\nColleague",
+    "timestamp": "2025-11-22T10:30:00",
+    "raw_folder": "INBOX"
+  },
+  {
+    "id": 10,
+    "from": "support@cloudservice.com",
+    "to": "user@company.com",
+    "subject": "Your ticket #8472 has been resolved",
+    "body": "Hello,\n\nYour support ticket regarding 'API rate limiting issues' has been resolved.\n\nSummary: We've increased your API rate limits as requested. The changes are now live.\n\nIf you continue to experience issues, please reopen this ticket.\n\nBest regards,\nCloud Service Support",
+    "timestamp": "2025-11-21T18:45:00",
+    "raw_folder": "INBOX"
+  },
+  {
+    "id": 11,
+    "from": "team-lead@company.com",
+    "to": "user@company.com",
+    "subject": "Sprint Planning - Next Week's Priorities",
+    "body": "Hi Team,\n\nFor next week's sprint, please focus on:\n\n1. Complete user authentication feature\n2. Fix critical bugs from last release\n3. Update API documentation\n4. Prepare demo for stakeholders\n\nLet's sync on Monday morning to finalize the sprint backlog.\n\nThanks,\nTeam Lead",
+    "timestamp": "2025-11-21T15:20:00",
+    "raw_folder": "INBOX"
+  },
+  {
+    "id": 12,
+    "from": "events@techconference.com",
+    "to": "user@company.com",
+    "subject": "TechConf 2026 - Early Bird Registration Now Open!",
+    "body": "Join us at TechConf 2026!\n\nDates: March 15-17, 2026\nLocation: San Francisco Convention Center\n\nEarly Bird Discount: 30% off (expires December 15)\n\nFeatured Speakers:\n- Dr. Jane Smith (AI Research)\n- John Doe (Cloud Architecture)\n- Sarah Johnson (Cybersecurity)\n\nRegister now: [link]\n\nSee you there!",
+    "timestamp": "2025-11-21T12:00:00",
+    "raw_folder": "INBOX"
+  },
+  {
+    "id": 13,
+    "from": "it-admin@company.com",
+    "to": "user@company.com",
+    "subject": "URGENT: System Maintenance Tonight 10 PM - 2 AM",
+    "body": "IMPORTANT NOTICE\n\nScheduled system maintenance will occur tonight:\n\nDate: November 25, 2025\nTime: 10:00 PM - 2:00 AM EST\n\nAffected Systems:\n- Email servers\n- File sharing platform\n- VPN access\n\nPlease save your work and log out before 10 PM.\n\nApologies for any inconvenience.\n\nIT Department",
+    "timestamp": "2025-11-21T09:15:00",
+    "raw_folder": "INBOX"
+  },
+  {
+    "id": 14,
+    "from": "recruiter@techcorp.com",
+    "to": "user@company.com",
+    "subject": "Exciting Senior Developer Opportunity",
+    "body": "Hi,\n\nI came across your profile and thought you'd be a great fit for a Senior Developer position at TechCorp.\n\nHighlights:\n- Competitive salary ($150K-$180K)\n- Remote-first culture\n- Cutting-edge tech stack\n- Equity options\n\nAre you open to exploring new opportunities? I'd love to schedule a brief call.\n\nBest,\nRecruiter",
+    "timestamp": "2025-11-20T16:30:00",
+    "raw_folder": "INBOX"
+  },
+  {
+    "id": 15,
+    "from": "ceo@company.com",
+    "to": "user@company.com",
+    "subject": "Company All-Hands Meeting - December 1st",
+    "body": "Dear Team,\n\nPlease join us for our quarterly all-hands meeting:\n\nDate: December 1, 2025\nTime: 2:00 PM EST\nLocation: Virtual (Zoom link to follow)\n\nAgenda:\n- Q4 results review\n- 2026 strategic initiatives\n- Team recognitions\n- Open Q&A\n\nAttendance is mandatory. Looking forward to seeing everyone there.\n\nBest regards,\nCEO",
+    "timestamp": "2025-11-20T14:00:00",
+    "raw_folder": "INBOX"
+  }
+]
