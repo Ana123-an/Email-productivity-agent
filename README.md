@@ -1,174 +1,248 @@
-📧 Prompt-Driven Email Productivity Agent
+# 📧 Email Productivity Agent
 
-An intelligent LLM-powered Email Productivity Agent that automates inbox management.
-The system uses user-defined prompts (“Prompt Brain”) to categorize emails, extract action items, summarize content, and auto-draft replies — all through a clean Streamlit interface.
+A prompt-driven AI-powered email management system built with Streamlit and Python. Process emails, extract action items, draft replies, and interact with your inbox using natural language.
+## ✨ Features
 
-🚀 Features
-Capability	Description
-Email Categorization	Classifies emails into Important / To-Do / Newsletter / Spam
-Action-Item Extraction	Identifies tasks + deadlines and stores them in structured format
-Auto-Draft Replies	Generates editable draft responses (never sends emails)
-Chat-Based Interaction	Ask: “Summarize this email”, “What tasks do I have?” etc.
-Prompt-Driven System	User-editable configuration that shapes agent behavior
-Error Safe	Fallback responses if LLM/API issues occur
+### 📥 Phase 1: Email Ingestion & Prompt Storage
+- Load and process mock inbox with 15 diverse sample emails
+- Edit and save AI prompt templates via intuitive UI
+- Persistent configuration stored in JSON
+- Never hard-codes prompts - all behavior driven by `prompts.json`
 
-All results are stored safely in session state — no email is sent automatically.
+### 🤖 Phase 2: Email Processing Agent
+- **Smart Categorization**: Automatically sorts emails (Important, Newsletter, Spam, To-Do)
+- **Action Item Extraction**: Identifies tasks with deadlines
+- **Email Summarization**: Generates 2-3 bullet point summaries
+- **Natural Language Chat**: Query your inbox using conversational language
 
-🏗️ System Architecture
-Streamlit Frontend
-   │
-   ├── Inbox Viewer
-   ├── Email Details
-   ├── Prompt Manager
-   └── Email Agent Chat
-   │
-Python Backend
-   ├── LLM Client (OpenAI/Compatible)
-   ├── Inbox Loader
-   ├── Prompt Storage Layer
-   ├── Processing Agent
-   └── Draft Manager
+### ✉️ Phase 3: Draft Generation
+- AI-powered reply drafting
+- Customizable tone (Professional, Friendly, Formal, Concise)
+- Draft storage and review (no actual sending for safety)
+- Context-aware responses based on email thread
 
+## 🚀 Quick Start
 
-Prompts drive ALL LLM behavior and are stored in a JSON file that the user can edit anytime.
+### Prerequisites
+- Python 3.10 or higher
+- OpenAI API key ([Get one here](https://platform.openai.com/api-keys))
 
-📂 Project Structure
-email-productivity-agent/
-│
-├── app.py                        # Streamlit UI
-├── backend/
-│   ├── models.py
-│   ├── inbox_loader.py
-│   ├── processors.py
-│   ├── prompts_manager.py
-│   ├── llm_client.py
-│   └── agent.py
-├── data/
-│   ├── mock_inbox.json           # 10–20 sample emails
-│   └── prompts.json              # Editable prompts ("Prompt Brain")
-├── requirements.txt
-└── .env.example (optional)
+### Installation
 
-🛠️ Setup Instructions
-1️⃣ Clone the Repository
-git clone https://github.com/<your-user>/email-productivity-agent.git
+1. **Clone or extract the project:**
+unzip email-productivity-agent.zip
 cd email-productivity-agent
 
-2️⃣ Install Dependencies
+2. **Install dependencies:**
 pip install -r requirements.txt
 
-3️⃣ Configure LLM API Key
 
-Create a .env file / Streamlit Secrets:
+3. **Set up your API key:**
 
-OPENAI_API_KEY="your-key-here"
+**Option A: Environment Variable**
+macOS/Linux
+export OPENAI_API_KEY='your-api-key-here'
 
-4️⃣ Run the Application
+Windows (Command Prompt)
+set OPENAI_API_KEY=your-api-key-here
+
+Windows (PowerShell)
+$env:OPENAI_API_KEY="your-api-key-here"
+
+**Option B: Create `.env` file**
+cp .env.example .env
+
+Edit .env and add your key:
+OPENAI_API_KEY=your-api-key-here
+MODEL_NAME=gpt-4o-mini
+
+4. **Run the application:**
 streamlit run app.py
 
-📥 Loading the Mock Inbox
 
-The app includes a mock inbox stored at:
+5. **Open your browser:**
+Navigate to `http://localhost:8501`
 
-data/mock_inbox.json
+## 📖 Usage Guide
+
+### Getting Started
+1. Click **"🔄 Load Mock Inbox"** in the sidebar
+2. Click **"🔍 Run Processing"** to categorize emails and extract actions
+3. Explore the four main tabs
+
+### Navigation
+
+#### 📬 Inbox Tab
+- View all emails with category tags
+- See action item counts
+- Quick access to email details
+- Batch processing controls
+
+#### 📧 Email Details Tab
+Select and interact with individual emails:
+- **Summarize**: Get a concise 2-3 bullet point summary
+- **Extract Tasks**: Find action items with deadlines
+- **Draft Reply**: Generate AI-powered responses with tone selection
+
+#### 🧠 Prompt Brain Config Tab
+Customize AI behavior:
+- Edit all 5 prompt templates
+- Control categorization logic
+- Customize summarization style
+- Modify reply drafting instructions
+- Save changes to `prompts.json`
+
+#### 💬 Email Agent Chat Tab
+Natural language interaction:
+"Summarize this email"
+"What tasks do I need to do?"
+"Show me all urgent emails"
+"Draft a reply with friendly tone"
 
 
-To load it:
+## 🏗️ Project Structure
+email-productivity-agent/
+├── app.py # Main Streamlit application
+├── backend/ # Modular backend
+│ ├── init.py
+│ ├── models.py # Data models (Email, ActionItem, DraftEmail)
+│ ├── inbox_loader.py # Email loading logic
+│ ├── prompts_manager.py # Prompt CRUD operations
+│ ├── processors.py # Email processing functions
+│ ├── agent.py # Chat agent logic
+│ └── llm_client.py # OpenAI API wrapper
+├── data/
+│ ├── mock_inbox.json # 15 sample emails
+│ └── prompts.json # Editable prompt templates
+├── requirements.txt # Python dependencies
+└── .env.example # Environment variable template
 
-Launch the app
 
-Click “Load Mock Inbox”
+## 🎯 Key Architecture Decisions
 
-The Inbox tab will show all sample emails
+### Prompt-Driven Design
+All AI behavior is controlled by user-editable prompts stored in `prompts.json`:
+- **Categorization Prompt**: How emails are classified
+- **Action Item Prompt**: Task extraction format (JSON)
+- **Auto-Reply Prompt**: Reply drafting instructions
+- **Summary Prompt**: Summarization style
+- **General Agent Prompt**: Chat agent personality
 
-🎛️ Prompt Configuration (Prompt Brain)
+### Modular Backend
+Clear separation of concerns:
+- `models.py`: Type-safe data structures
+- `llm_client.py`: Centralized API calls with error handling
+- `processors.py`: Email processing operations
+- `agent.py`: Natural language query handling
 
-To customize how the AI behaves:
+### Safety First
+- No actual email sending (drafts only)
+- API keys via environment variables
+- Comprehensive error handling
+- JSON parsing with fallbacks
 
-Open the Prompt Manager tab (or sidebar)
+## 🌐 Deployment
 
-Edit prompts such as:
+### Streamlit Community Cloud (Recommended - FREE)
 
-Categorization Prompt
+1. **Push to GitHub:**
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/yourusername/email-agent.git
+git push -u origin main
 
-Action-Item Extraction Prompt
 
-Auto-Reply Draft Prompt
+2. **Deploy:**
+- Visit [share.streamlit.io](https://share.streamlit.io)
+- Click "New app"
+- Select your repository
+- Set main file: `app.py`
+- Add secrets in "Advanced settings":
 
-Summary Prompt
+OPENAI_API_KEY = "your-api-key-here"
+MODEL_NAME = "gpt-4o-mini"
+- Click "Deploy"
 
-Click “Save Prompts” to update the system instantly
+3. **Done!** Your app will be live at `https://yourapp.streamlit.app`
 
-This enables dynamic behavior change without editing code.
+### Docker Deployment
+FROM python:3.10-slim
 
-💡 Usage Guide
-📨 Inbox Tab
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+COPY . .
 
-Load mock inbox
 
-View sender, subject, timestamp
+### Modifying Prompts
+Use the **Prompt Brain Config** tab in the UI, or directly edit `data/prompts.json`
 
-Run full processing (categorization + action extraction)
+## 🐛 Troubleshooting
 
-🔍 Email Details Tab
+### "API Key not configured"
+- Ensure `OPENAI_API_KEY` is set in environment or `.streamlit/secrets.toml`
+- Restart the app after setting the key
 
-Select an email to view full content
+### "Error loading inbox"
+- Check that `data/mock_inbox.json` exists
+- Validate JSON syntax
 
-Buttons available:
+### "LLM Error: rate_limit"
+- Wait a few seconds and try again
+- Consider upgrading your OpenAI plan
 
-Summarize Email
+### JSON Parsing Errors
+- Review prompt templates in "Prompt Brain Config"
+- Ensure `action_item` prompt requests valid JSON format
 
-Show Action Items
+## 📊 Sample Data
 
-Draft Reply → Editable + Save as draft
+The mock inbox includes 15 diverse emails:
+- Meeting requests (for reply drafting)
+- Newsletters (for categorization)
+- Spam messages (for filtering)
+- Task requests (for action extraction)
+- Project updates (for summarization)
+- HR notifications (with deadlines)
+- Client inquiries (multi-question emails)
 
-🤖 Email Agent Chat Tab
+## 🤝 Contributing
 
-Ask conversational questions like:
+Contributions are welcome! Areas for enhancement:
+- Connect to real email (Gmail API, IMAP)
+- Calendar integration for meeting requests
+- Email search and advanced filtering
+- User authentication
+- Multi-language support
+- Export drafts to various formats
 
-Query Type	Example
-Summarization	“Summarize this email”
-Task Recall	“What tasks do I need to do today?”
-Priority Help	“Show all Important emails”
-Draft Writing	“Reply in a more formal tone”
+## 📄 License
 
-The agent uses:
+This project is provided as-is for educational and productivity purposes.
 
-User-defined prompts
+## 🙏 Acknowledgments
 
-Inbox context
+Built with:
+- [Streamlit](https://streamlit.io/) - Web UI framework
+- [OpenAI](https://openai.com/) - LLM API
+- Python 3.10+
 
-Email thread content
+## 📞 Support
 
-🔐 Safety & Robustness
+For issues or questions:
+1. Check the troubleshooting section
+2. Review OpenAI API documentation
+3. Verify all dependencies are installed correctly
 
-✔ No emails are sent — only drafts saved
-✔ LLM errors are caught and shown gracefully
-✔ JSON parsing fallback for invalid model outputs
-✔ User stays in control of final email content
+## ⭐ Star this project!
 
-📹 Demo Video Requirements (for submission)
+If you find this helpful, please star the repository!
 
-Record a 5–10 minute walkthrough showing:
+---
 
-Requirement	Demonstrate
-Loading Inbox	Show mock inbox loading UI
-Editing Prompts	Modify prompt and reprocess
-Categorization + Action Extraction	Run processing, show tags and tasks
-Chat-Based Actions	Summarize, reply, suggest actions
+**Built with ❤️ using Streamlit, Python, and OpenAI**
 
-Optional: Highlight draft storage + safety features
+*Last updated: November 25, 2025*
 
-📌 Evaluation Criteria Checklist (✔ Completed)
-Requirement	Status
-Inbox ingestion	✔
-Prompt-driven behavior	✔
-Summaries, replies, actions	✔
-Drafts only	✔
-UI clarity + good UX	✔
-Error handling	✔
-Modular architecture	✔
-👤 Author
 
-Ananya Mishra
-Email: mishra77ananya@gmail.com
